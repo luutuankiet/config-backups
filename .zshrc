@@ -1,6 +1,3 @@
-if [[ $- =~ i ]] && [[ -z "$TMUX" ]] && [[ -n "$SSH_TTY" ]]; then
-  tmux attach-session -t ssh_tmux || tmux new-session -s ssh_tmux \; split-window -h -p 25 \; send-keys 'htop' C-m \; select-pane -L \; split-window -v -p 30 \; send-keys 'neofetch' C-m
-fi
 
 
 # If you come from bash you might have to change your $PATH.
@@ -105,3 +102,5 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias t="~/ticktask/ticktask"
+alias ipaddress="curl ifconfig.me/ip"
+alias dev="~/utils/tmux_dev"
