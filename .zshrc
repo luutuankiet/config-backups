@@ -1,3 +1,4 @@
+
 if [[ $- =~ i ]] && [[ -z "$TMUX" ]] && [[ -n "$SSH_TTY" ]]; then
   tmux attach-session -t ssh_tmux || tmux new-session -s ssh_tmux \; split-window -h -p 25 \; send-keys 'htop' C-m \; select-pane -L \; split-window -v -p 30 \; send-keys 'neofetch' C-m
 fi
