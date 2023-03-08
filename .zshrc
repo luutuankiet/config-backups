@@ -101,6 +101,7 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias t="~/ticktask/ticktask"
+alias {t,tick,task}="~/ticktask/ticktask"
 alias ipaddress="curl ifconfig.me/ip"
 alias dev="~/utils/tmux_dev"
+alias detach="tmux detach"
