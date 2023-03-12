@@ -105,3 +105,5 @@ alias {t,tick,task}="~/ticktask/ticktask"
 alias ipaddress="curl ifconfig.me/ip"
 alias dev="~/utils/tmux_dev"
 alias detach="tmux detach"
+alias hdi='function hdi(){ howdoi $* -c -n 5; }; hdi'
+alias adb='~/utils/platform-tools/adb'
