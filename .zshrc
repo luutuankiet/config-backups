@@ -107,3 +107,4 @@ alias dev="~/utils/tmux_dev"
 alias detach="tmux detach"
 alias hdi='function hdi(){ howdoi $* -c -n 5; }; hdi'
 alias adb='~/utils/platform-tools/adb'
+export PATH="$PATH:/home/kiet/.local/lib/python3.10/site-packages"
