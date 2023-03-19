@@ -105,6 +105,6 @@ alias {t,tick,task}="~/ticktask/ticktask"
 alias ipaddress="curl ifconfig.me/ip"
 alias dev="~/utils/tmux_dev"
 alias detach="tmux detach"
-alias h="python -m howdoi $* -c"
+alias {hdi,h}="python -m howdoi $* -c -n 3"
 alias adb='~/utils/platform-tools/adb'
 export PATH="$PATH:/home/kiet/.local/lib/python3.10/site-packages"
