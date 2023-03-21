@@ -107,4 +107,4 @@ alias dev="~/utils/tmux_dev"
 alias detach="tmux detach"
 alias {hdi,h}="python -m howdoi $* -c -n 3"
 alias adb='~/utils/platform-tools/adb'
-export PATH="$PATH:/home/kiet/.local/lib/python3.10/site-packages"
+export PATH=/home/kiet/.local/bin:$PATH
