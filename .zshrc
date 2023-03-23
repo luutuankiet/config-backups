@@ -108,3 +108,4 @@ alias detach="tmux detach"
 alias {hdi,h}="python -m howdoi $* -c -n 3"
 alias adb='~/utils/platform-tools/adb'
 export PATH=/home/kiet/.local/bin:$PATH
+export OPENAI_API_KEY="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"
