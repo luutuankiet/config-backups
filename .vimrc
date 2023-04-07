@@ -62,6 +62,7 @@ Plug 'sheerun/vim-polyglot'
 call plug#end()
 
 set number
+set relativenumber
 set clipboard=unnamedplus " use the clipboards of vim and win
 set paste " paste from a windows or from vim
 set go+=a " visual selection automatically copied to the clipboard
