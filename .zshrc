@@ -110,3 +110,5 @@ alias adb='~/utils/platform-tools/adb'
 export PATH="/home/kiet/.local/bin:/home/kiet/ticktask:$PATH" # path for installed executables, separated by colon
 export OPENAI_API_KEY="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" # key for chatgpt
 alias transfer_files="cp -P 15108 tmp luutuankiet@192.168.1.14:~"# a small script to send temp text file from mint to mac
+alias off="xset dpms force off"
+alias p="scrcpy"
