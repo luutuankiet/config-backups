@@ -63,6 +63,6 @@ call plug#end()
 
 set number
 set relativenumber
-set clipboard=unnamedplus " use the clipboards of vim and win
-set paste " paste from a windows or from vim
-set go+=a " visual selection automatically copied to the clipboard
+set clipboard=unnamedplus " use the clipboards of vim and win - This setting allows you to use the system clipboard in Vim. When you yank (copy) a text selection in Vim, it will automatically be added to the system clipboard, so you can paste it into other applications using your usual clipboard shortcut
+set paste " paste from a windows or from vim - This setting tells Vim to use "paste mode" when pasting text. Normally, when you paste text in Vim, it tries to interpret the contents of the clipboard as commands to execute within Vim. This can lead to strange behavior if you're just trying to paste plain text. With `set paste`, Vim will just paste the text as-is, without interpreting any commands.
+set go+=a " visual selection automatically copied to the clipboard - This setting automatically adds any text you visually select in Vim to the system clipboard. Normally, you would need to explicitly copy the selected text to the clipboard using the `y` command. With this setting, any visual selection you make in Vim will automatically be copied to the clipboard, without you having to do anything else.
