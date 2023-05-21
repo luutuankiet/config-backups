@@ -112,3 +112,4 @@ export OPENAI_API_KEY="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" # ke
 alias transfer_files="cp -P 15108 tmp luutuankiet@192.168.1.14:~"# a small script to send temp text file from mint to mac
 alias off="xset dpms force off"
 alias p="scrcpy"
+PATH=$PATH:~/x-tools/arm-kindlepw2-linux-gnueabi/bin
