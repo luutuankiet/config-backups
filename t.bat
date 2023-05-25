@@ -4,8 +4,8 @@ set access_token=b57f108e-6ae5-4586-8346-12300468942f
 
 rem windows dont support python natively so using a python wrapper
 
-set py_script=regex_helper.py
-set py_cmd=python %py_script% %task_title%
+set py_script=%~dp0regex_helper.py
+rem the above ^ `%~dp0` is a env var for "current working directory of the script"
 rem execute script
 for /f "delims=" %%i in ('%py_cmd%') do set task_title=%%i
 
