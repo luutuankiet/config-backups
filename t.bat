@@ -1,20 +1,8 @@
 @echo OFF
 set task_title=%*
-set access_token=b57f108e-6ae5-4586-8346-12300468942f
-
-rem windows dont support python natively so using a python wrapper
-
-set py_script=%~dp0regex_helper.py
-rem the above ^ `%~dp0` is a env var for "current working directory of the script"
-rem execute script
-for /f "delims=" %%i in ('%py_cmd%') do set task_title=%%i
-
 echo adding task "%task_title%"...
 
+rem comment this part if you dont want task body
+rem set /p task_body=input description if any:
 
-
-set /p task_body=input description if any:
-
-
-
-curl -s -X POST -H "Content-Type: application/json" -H "Authorization: Bearer %access_token%" -d "{\"title\":\"%task_title%\", \"content\": \"%task_body%\"}" https://api.ticktick.com/open/v1/task --ssl-no-revoke & exit
+curl -X POST -H "Content-Type: text/plain" -d "%task_title%" --ssl-no-revoke https://hook.us1.make.com/mt0sveegbtqbsdhgobsqtph9nycwx7t6 & exit
