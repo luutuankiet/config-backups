@@ -1,0 +1,30 @@
+#!/bin/bash
+
+if [ -z "$1" ]; then # returns True if length of parameter $1 is zero
+    echo "Usage: $0 your task title"
+
+    exit 1
+fi
+
+task_title=$(echo "$@")
+
+# finally send request to create task
+curl -X POST \
+  -H 'Content-Type: text/plain' \
+  -d "$task_title" \
+  https://hook.us1.make.com/mt0sveegbtqbsdhgobsqtph9nycwx7t6 
+
+echo "adding task title $task_title"
+if (( $? != 0 )); then
+    echo "Error on creating task. Server response:"
+    echo "$resp_create_task"
+
+    mkdir -p $FOLDER_ERROR_TASKS
+    error_task_file=$(date +%s)
+    echo "$@" > $FOLDER_ERROR_TASKS/$error_task_file
+    echo "Task saved to $FOLDER_ERROR_TASKS"
+
+    exit 2
+fi
+
+kill -9 $PPID
