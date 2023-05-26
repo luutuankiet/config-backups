@@ -7,19 +7,14 @@ if [ -z "$1" ]; then
     exit 1
 fi
 
-task_title=$(echo "$@" | sed 's/\\/\\\\/g; s/"/\\"/g')
-echo "parsed title $task_title"
-json_task='{"title": "'$task_title'"}'
+task_title=$(echo "$@")
+echo "adding task $task_title"
 # finally send request to create task
-resp_create_task=$(/mnt/us/usbnet/bin/curl -s \
-    --fail-with-body \
-    --header "Content-Type: application/json" \
-    --header "Authorization: Bearer b57f108e-6ae5-4586-8346-12300468942f" \
-    --request POST \
-    --data "$json_task" \
-    https://api.ticktick.com/open/v1/task)
-
-echo "task sent $@"
+resp_create_task=$(/mnt/us/usbnet/bin/curl -X POST \
+  -H 'Content-Type: text/plain' \
+  -d "$task_title" \
+  https://hook.us1.make.com/mt0sveegbtqbsdhgobsqtph9nycwx7t6)
+  
 if (( $? != 0 )); then
     echo "Error on creating task. Server response:"
     echo "$resp_create_task"
