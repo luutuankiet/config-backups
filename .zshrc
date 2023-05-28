@@ -64,6 +64,7 @@ ZSH_THEME="robbyrussell"
 # see 'man strftime' for details.
 # HIST_STAMPS="mm/dd/yyyy"
 
+
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
 
@@ -113,3 +114,6 @@ alias transfer_files="cp -P 15108 tmp luutuankiet@192.168.1.14:~"# a small scrip
 alias off="xset dpms force off"
 alias p="scrcpy"
 PATH=$PATH:~/x-tools/arm-kindlepw2-linux-gnueabi/bin
+alias innovm="ssh -i ~/.ssh/InnoVM1_key.pem VMAdmin@40.90.168.49"
+alias c="chatgpt"
+alias rm=trash
