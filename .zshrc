@@ -108,12 +108,15 @@ alias dev="~/utils/tmux_dev"
 alias detach="tmux detach"
 alias {hdi,h}="python -m howdoi $* -c -n 3"
 alias adb='~/utils/platform-tools/adb'
-export PATH="/home/kiet/.local/bin:/home/kiet/ticktask:$PATH" # path for installed executables, separated by colon
+
+# adding path - syntax : export PATH=$PATH:/path/to/folder1:/path/to/folder2:/path/to/folder3
+export PATH=$PATH:/home/kiet/.local/bin:/home/kiet/x-tools/arm-kindlepw2-linux-gnueabi/bin:
+
+#
+
 export OPENAI_API_KEY="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" # key for chatgpt
 alias transfer_files="cp -P 15108 tmp luutuankiet@192.168.1.14:~"# a small script to send temp text file from mint to mac
 alias off="xset dpms force off"
 alias p="scrcpy"
-PATH=$PATH:~/x-tools/arm-kindlepw2-linux-gnueabi/bin
 alias innovm="ssh -i ~/.ssh/InnoVM1_key.pem VMAdmin@40.90.168.49"
-alias c="chatgpt"
 alias rm=trash
