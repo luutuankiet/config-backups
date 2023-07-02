@@ -1,0 +1,4 @@
+#!/bin/bash
+port=$@
+echo "connecting to port $port"
+adb connect 192.168.1.202:$port && scrcpy --no-audio & exit
