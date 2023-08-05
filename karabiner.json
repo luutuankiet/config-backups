@@ -327,7 +327,7 @@
                             }
                         ]
                     },
-{
+                    {
                         "description": "SpaceFN: Space+d to delete",
                         "manipulators": [
                             {
@@ -797,6 +797,32 @@
                                 "type": "basic"
                             }
                         ]
+                    },
+                    {
+                        "description": "Ken's custom : Map Tab to shift when held",
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "key_code": "tab",
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
+                                },
+                                "to_if_alone": [
+                                    {
+                                        "key_code": "tab"
+                                    }
+                                ],
+                                "to_if_held_down": [
+                                    {
+                                        "key_code": "left_shift"
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
                     }
                 ]
             },
@@ -1023,7 +1049,7 @@
                     },
                     "to": [
                         {
-                            "key_code": "delete_or_backspace"
+                            "key_code": "vk_none"
                         }
                     ]
                 },
@@ -1044,6 +1070,26 @@
                     "to": [
                         {
                             "key_code": "right_control"
+                        }
+                    ]
+                },
+                {
+                    "from": {
+                        "key_code": "return_or_enter"
+                    },
+                    "to": [
+                        {
+                            "key_code": "vk_none"
+                        }
+                    ]
+                },
+                {
+                    "from": {
+                        "key_code": "delete_or_backspace"
+                    },
+                    "to": [
+                        {
+                            "key_code": "vk_none"
                         }
                     ]
                 }
