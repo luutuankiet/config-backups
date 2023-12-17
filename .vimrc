@@ -11,7 +11,6 @@ endif
 
 " call the addon polygot
 call plug#begin()
-Plug 'vim-python/python-syntax'
 
 Plug 'sheerun/vim-polyglot'
 
