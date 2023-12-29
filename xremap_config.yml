@@ -1,0 +1,6 @@
+modmap:
+  - name: except tiny10
+    application:
+      only: VirtualBox Machine
+    remap:
+      KEY_LEFTCTRL: KEY_INSERT
