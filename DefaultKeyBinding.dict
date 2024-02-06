@@ -1,0 +1,7 @@
+{
+    "@\UF702" = ("moveWordBackward:", "moveWordBackward:", "moveWordForward:");  // Command + Left Arrow
+    "@$\UF702" = ("moveWordBackwardAndModifySelection:", "moveWordBackwardAndModifySelection:", "moveWordForwardAndModifySelection:");  // Command + Shift + Left Arrow
+
+    "@\UF703" = ("moveWordForward:", "moveWordForward:", "moveWordBackward:");  // Command + Right Arrow
+    "@$\UF703" = ("moveWordForwardAndModifySelection:", "moveWordForwardAndModifySelection:", "moveWordBackwardAndModifySelection:");  // Command + Shift + Right Arrow
+}
