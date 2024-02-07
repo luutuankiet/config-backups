@@ -4,4 +4,14 @@
 
     "@\UF703" = ("moveWordForward:", "moveWordForward:", "moveWordBackward:");  // Command + Right Arrow
     "@$\UF703" = ("moveWordForwardAndModifySelection:", "moveWordForwardAndModifySelection:", "moveWordBackwardAndModifySelection:");  // Command + Shift + Right Arrow
+		
+		/* home */
+    "\UF729"  = "moveToBeginningOfLine:";
+    "$\UF729" = "moveToBeginningOfLineAndModifySelection:";
+
+    /* end */
+    "\UF72B"  = "moveToEndOfLine:";
+    "$\UF72B" = "moveToEndOfLineAndModifySelection:";
+
 }
+
