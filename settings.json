@@ -1,0 +1,150 @@
+{
+    "remote.SSH.remotePlatform": {
+        "40.90.168.49": "linux",
+        "103.110.84.120": "linux",
+        "103.221.223.102": "linux",
+        "103.221.223.131": "linux",
+        "103.221.223.158": "linux",
+        "139.180.153.250": "linux",
+        "manjaro": "linux",
+        "innoVM": "linux"
+    },
+    "terminal.integrated.enableMultiLinePasteWarning": false,
+    "terminal.integrated.env.osx": {
+        "PYTHONPATH": "${env:PYTHONPATH}:${workspaceFolder}/src:{workspaceFolder}/app",
+    },
+    "terminal.integrated.env.linux": {
+        "PYTHONPATH": "${env:PYTHONPATH}:${workspaceFolder}/src:{workspaceFolder}/app",
+    },
+    "terminal.integrated.env.windows": {
+        "PYTHONPATH": "${env:PYTHONPATH};${workspaceFolder}/src;{workspaceFolder}/app",
+    },
+    "python.defaultInterpreterPath": ".venv/bin/python",
+    "python.venvFolders": [
+        "${workspaceFolder}/.venv"
+    ],
+    "python.envFile": "${workspaceFolder}/.env",
+    "python.terminal.activateEnvironment": true,
+    "workbench.startupEditor": "none",
+    "explorer.confirmDragAndDrop": false,
+    "git.autorefresh": true,
+    "settingsSync.ignoredSettings": [
+        "update.mode",
+        "editor.fontSize",
+        "sqlfluff.executablePath",
+        "sqlfluff.env.customDotEnvFiles",
+        "sqlfluff.env.useDotEnvFile"
+    ],
+    "jupyter.interactiveWindow.creationMode": "perFile",
+    "notebook.confirmDeleteRunningCell": false,
+    "notebook.lineNumbers": "on",
+    "docsView.documentationView.updateMode": "sticky",
+    "jupyter.askForKernelRestart": false,
+    "editor.minimap.enabled": false,
+    "editor.unicodeHighlight.invisibleCharacters": false,
+    "editor.fontSize": 18,
+    "editor.accessibilitySupport": "off",
+    "files.watcherExclude": {
+        "**/***": true
+    },
+    "terminal.integrated.fontSize": 17,
+    "terminal.integrated.defaultProfile.linux": "zsh",
+    // "terminal.integrated.shell.windows": "C:\\Users\\KL1406\\AppData\\Local\\Programs\\Git\\bin\\bash.exe",
+    "terminal.integrated.profiles.windows": {
+        "PowerShell": {
+            "source": "PowerShell",
+            "icon": "terminal-powershell"
+        },
+        "Command Prompt": {
+            "path": [
+                "${env:windir}/Sysnative/cmd.exe",
+                "${env:windir}/System32/cmd.exe"
+            ],
+            "args": [],
+            "icon": "terminal-cmd"
+        },
+        "GitBash": {
+            "path": "C:\\Users\\KL1406\\AppData\\Local\\Programs\\Git\\bin\\bash.exe",
+            "icon": "terminal-bash"
+        },
+    },
+    "terminal.integrated.defaultProfile.windows": "GitBash",
+    "files.autoSave": "off",
+    "editor.inlineSuggest.suppressSuggestions": true,
+    "cody.commandCodeLenses": false,
+    "editor.fontFamily": "'Droid Sans Mono', 'monospace', monospace",
+    "git.confirmSync": false,
+    "pylint.importStrategy": "fromEnvironment",
+    "git.openRepositoryInParentFolders": "never",
+    "remote.autoForwardPorts": false,
+    "cody.codeActions.enabled": false,
+    "cody.editorTitleCommandIcon": false,
+    "git.enableSmartCommit": true,
+    "git.autofetch": true,
+    "[python]": {
+        "diffEditor.ignoreTrimWhitespace": false
+    },
+    "python.languageServer": "Pylance",
+    "remote.tunnels.alwaysUpdateCLI": true,
+    "remote.SSH.defaultExtensions": [
+        "gitpod.gitpod-remote-ssh"
+    ],
+    "files.associations": {
+        "*.sql": "sql",
+        "*.yml": "jinja-yaml"
+    },
+    "[jinja-sql]": {
+        "editor.defaultFormatter": "henriblancke.vscode-dbt-formatter"
+    },
+    "workbench.iconTheme": "vscode-icons",
+    "sqlfluff.executablePath": "",
+    "redhat.telemetry.enabled": true,
+    "sqlfluff.env.useDotEnvFile": true,
+    "window.zoomLevel": 1,
+    "dev.containers.defaultFeatures": {},
+    "editor.smoothScrolling": true,
+    "terminal.integrated.smoothScrolling": true,
+    "workbench.list.smoothScrolling": true,
+    "terminal.integrated.cursorStyle": "underline",
+    "workbench.colorTheme": "Bluloco Dark",
+    "gitlens.graph.minimap.enabled": false,
+    "git.fetchOnPull": true,
+    "settingsSync.keybindingsPerPlatform": true,
+    "editor.definitionLinkOpensInPeek": true,
+    "editor.lineHeight": 0,
+    "git-graph.keyboardShortcut.refresh": "UNASSIGNED",
+    "git-graph.openNewTabEditorGroup": "Two",
+    "mssql.connections": [
+        {
+            "server": "DBN002.pinnacle1.org",
+            "database": "XETL",
+            "authenticationType": "Integrated",
+            "profileName": "dev",
+            "encrypt": "Mandatory",
+            "trustServerCertificate": true,
+            "password": ""
+        }
+    ],
+    "mssql.format.datatypeCasing": "uppercase",
+    "mssql.format.keywordCasing": "uppercase",
+    "mssql.format.placeCommasBeforeNextStatement": true,
+    "mssql.format.placeSelectStatementReferencesOnNewLine": true,
+    "mssql.copyIncludeHeaders": true,
+    "mssql.messagesDefaultOpen": false,
+    "window.confirmSaveUntitledWorkspace": false,
+    "workbench.editorAssociations": {
+        "*.xlsx": "cweijan.officeViewer",
+        "*.csv": "default"
+    },
+    "sqltools.useNodeRuntime": false,
+    "mssql.enableQueryHistoryCapture": false,
+    "sqltools.connections": [],
+    "[sql]": {
+        "editor.defaultFormatter": "ms-mssql.mssql"
+    },
+    "poor-mans-t-sql-formatter-pg.std.breakJoinOnSections": true,
+    "poor-mans-t-sql-formatter-pg.std.expandInLists": true,
+    "diffEditor.hideUnchangedRegions.enabled": true,
+    "editor.renderLineHighlight": "all",
+    "explorer.confirmDelete": false,
+}
