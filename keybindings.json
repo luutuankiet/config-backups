@@ -1,0 +1,308 @@
+// Place your key bindings in this file to override the defaultsauto[]
+[
+    {
+        "key": "cmd+l",
+        "command": "-expandLineSelection",
+        "when": "textInputFocus"
+    },
+    {
+        "key": "cmd+b",
+        "command": "-workbench.action.toggleSidebarVisibility"
+    },
+    {
+        "key": "cmd+r",
+        "command": "-workbench.action.reloadWindow",
+        "when": "isDevelopment"
+    },
+    {
+        "key": "shift+cmd+c",
+        "command": "-workbench.action.terminal.new",
+        "when": "!terminalFocus"
+    },
+    {
+        "key": "f1",
+        "command": "-workbench.action.showCommands"
+    },
+    {
+        "key": "shift+cmd+r",
+        "command": "workbench.action.togglePanel"
+    },
+    {
+        "key": "cmd+j",
+        "command": "-workbench.action.togglePanel"
+    },
+    {
+        "key": "cmd+r",
+        "command": "-workbench.action.terminal.runRecentCommand",
+        "when": "accessibilityModeEnabled && terminalFocus && terminalHasBeenCreated || accessibilityModeEnabled && terminalFocus && terminalProcessSupported || accessibilityModeEnabled && accessibleViewIsShown && terminalHasBeenCreated && accessibleViewCurrentProviderId == 'terminal' || accessibilityModeEnabled && accessibleViewIsShown && terminalProcessSupported && accessibleViewCurrentProviderId == 'terminal'"
+    },
+    {
+        "key": "alt+x",
+        "command": "dbtPowerUser.executeSQL",
+        "when": "editorFocus && editorLangId == 'jinja-sql' && resourceLangId =~ /^sql$|^jinja-sql$/"
+    },
+    {
+        "key": "cmd+enter",
+        "command": "-dbtPowerUser.executeSQL",
+        "when": "editorFocus && resourceLangId =~ /^sql$|^jinja-sql$/"
+    },
+    {
+        "key": "alt+a",
+        "command": "dbtPowerUser.showCompiledSQL"
+    },
+    {
+        "key": "shift+alt+f",
+        "command": "-editor.action.formatDocument",
+        "when": "editorHasDocumentFormattingProvider && editorTextFocus && !editorReadonly && !inCompositeEditor"
+    },
+    {
+        "key": "shift+cmd+i",
+        "command": "-workbench.action.quickchat.toggle",
+        "when": "hasChatProvider"
+    },
+    {
+        "key": "shift+cmd+enter",
+        "command": "dbtPowerUser.buildCurrentModel"
+    },
+    {
+        "key": "shift+alt+r",
+        "command": "workbench.action.toggleMaximizedPanel"
+    },
+    {
+        "key": "shift+cmd+r",
+        "command": "-rerunSearchEditorSearch",
+        "when": "inSearchEditor"
+    },
+    {
+        "key": "cmd+p",
+        "command": "-workbench.action.quickOpen"
+    },
+    {
+        "key": "cmd+k cmd+k",
+        "command": "-editor.action.defineKeybinding",
+        "when": "resource == 'vscode-userdata:/Users/luutuankiet/Library/Application%20Support/Code/User/keybindings.json'"
+    },
+    {
+        "key": "cmd+k cmd+k",
+        "command": "-editor.action.selectFromAnchorToCursor",
+        "when": "editorTextFocus && selectionAnchorSet"
+    },
+    {
+        "key": "shift+cmd+c",
+        "command": "-workbench.action.terminal.openNativeConsole",
+        "when": "!terminalFocus"
+    },
+    {
+        "key": "cmd+k cmd+c",
+        "command": "workbench.action.showCommands"
+    },
+    {
+        "key": "shift+cmd+p",
+        "command": "-workbench.action.showCommands"
+    },
+    {
+        "key": "cmd+k cmd+c",
+        "command": "-editor.action.addCommentLine",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "cmd+k cmd+c",
+        "command": "-notebook.cell.collapseCellInput",
+        "when": "notebookCellListFocused && !inputFocus && !notebookCellInputIsCollapsed"
+    },
+    {
+        "key": "cmd+k cmd+c",
+        "command": "-notebook.cell.expandCellInput",
+        "when": "notebookCellInputIsCollapsed && notebookCellListFocused"
+    },
+    {
+        "key": "cmd+l",
+        "command": "workbench.action.toggleSidebarVisibility"
+    },
+    {
+        "key": "cmd+k cmd+l",
+        "command": "-editor.toggleFold",
+        "when": "editorTextFocus && foldingEnabled"
+    },
+    {
+        "key": "cmd+k cmd+f",
+        "command": "-editor.action.formatSelection",
+        "when": "editorHasDocumentSelectionFormattingProvider && editorTextFocus && !editorReadonly && !editorLangId == 'sql'"
+    },
+    {
+        "key": "cmd+k cmd+0",
+        "command": "-editor.foldAll",
+        "when": "editorTextFocus && foldingEnabled"
+    },
+    {
+        "key": "cmd+k cmd+s",
+        "command": "-workbench.action.openGlobalKeybindings"
+    },
+    {
+        "key": "alt+x",
+        "command": "editor.action.peekDefinition",
+        "when": "editorHasDefinitionProvider && !inReferenceSearchEditor && !isInEmbeddedEditor && !(editorLangId =~ /^sql$|^jinja-sql$/)"
+    },
+    {
+        "key": "shift+cmd+space",
+        "command": "-editor.action.triggerParameterHints",
+        "when": "editorHasSignatureHelpProvider && editorTextFocus"
+    },
+    {
+        "key": "shift+cmd+s",
+        "command": "-workbench.action.files.saveAs"
+    },
+    {
+        "key": "shift+cmd+s",
+        "command": "-workbench.action.files.saveLocalFile",
+        "when": "remoteFileDialogVisible"
+    },
+    {
+        "key": "cmd+k cmd+r",
+        "command": "git.refresh"
+    },
+    {
+        "key": "cmd+k cmd+r",
+        "command": "-workbench.action.keybindingsReference"
+    },
+    {
+        "key": "cmd+k cmd+r",
+        "command": "-git.revertSelectedRanges",
+        "when": "isInDiffEditor && !operationInProgress"
+    },
+    {
+        "key": "cmd+k cmd+enter",
+        "command": "git.commitMessageAccept"
+    },
+    {
+        "key": "cmd+k cmd+escape",
+        "command": "git.commitMessageDiscard"
+    },
+    {
+        "key": "alt+x",
+        "command": "mssql.runQuery",
+        "when": "editorTextFocus && editorLangId == 'sql' && !sqltools.file.connectionAttached"
+    },
+    {
+        "key": "shift+cmd+e",
+        "command": "-mssql.runQuery",
+        "when": "editorTextFocus && editorLangId == 'sql'"
+    },    
+    {
+        "key": "cmd+k cmd+l",
+        "command": "workbench.action.toggleEditorGroupLock"
+    },
+    {
+        "key": "shift+cmd+q",
+        "command": "-sqlite.runDocumentQuery",
+        "when": "editorLangId =~ /(sql|sqlite)/"
+    },
+    {
+        "key": "cmd+k cmd+s",
+        "command": "workbench.action.openGlobalKeybindings"
+    },
+    {
+        "key": "alt+x",
+        "command": "-cody.fixup.undoNearest",
+        "when": "cody.activated && cody.hasActionableEdit && !editorReadonly"
+    },
+    {
+        "key": "cmd+r",
+        "command": "workbench.action.toggleEditorWidths"
+    },
+    {
+        "key": "cmd+k shift+enter",
+        "command": "-workbench.action.pinEditor",
+        "when": "!activeEditorIsPinned"
+    },
+    {
+        "key": "cmd+k cmd+p",
+        "command": "workbench.action.unpinEditor",
+        "when": "activeEditorIsPinned"
+    },
+    {
+        "key": "cmd+k shift+enter",
+        "command": "-workbench.action.unpinEditor",
+        "when": "activeEditorIsPinned"
+    },
+    {
+        "key": "cmd+k cmd+p",
+        "command": "workbench.action.pinEditor"
+    },
+    {
+        "key": "shift+cmd+f",
+        "command": "-workbench.action.findInFiles"
+    },
+    {
+        "key": "cmd+k cmd+f",
+        "command": "poor-mans-t-sql-formatter-pg.poorFormatSelectionSql",
+        "when": "editorLangId == 'sql'"
+
+    },
+    {
+        "key": "shift+alt+f",
+        "command": "-editor.action.formatDocument.none",
+        "when": "editorTextFocus && !editorHasDocumentFormattingProvider && !editorReadonly"
+    },
+    {
+        "key": "shift+alt+x",
+        "command": "sqlite.runSelectedQuery",
+        "when": "sqlite.explorer.visible"
+    },
+    {
+        "key": "cmd+=",
+        "command": "-workbench.action.zoomIn"
+    },
+    {
+        "key": "cmd+=",
+        "command": "editor.action.fontZoomIn"
+    },
+    {
+        "key": "cmd+-",
+        "command": "editor.action.fontZoomOut"
+    },
+    {
+        "key": "cmd+-",
+        "command": "-workbench.action.zoomOut"
+    },
+    {
+        "key": "cmd+k cmd+f",
+        "command": "editor.action.formatDocument",
+        "when": "editorLangId != 'sql'"
+
+
+    },
+    {
+        "key": "alt+x",
+        "command": "sqltools.executeCurrentQuery",
+        "when": "!(editorLangId == 'jinja-sql') && sqltools.file.connectionAttached"
+    },
+    {
+        "key": "shift+cmd+u",
+        "command": "-workbench.action.output.toggleOutput",
+        "when": "workbench.panel.output.active"
+    },
+    {
+        "key": "shift+cmd+u",
+        "command": "editor.action.transformToUppercase"
+    },
+    {
+        "key": "shift+cmd+l",
+        "command": "editor.action.transformToLowercase"
+    },
+    {
+        "key": "shift+cmd+l",
+        "command": "-selectAllSearchEditorMatches",
+        "when": "inSearchEditor"
+    },
+    {
+        "key": "shift+cmd+l",
+        "command": "-editor.action.selectHighlights",
+        "when": "editorFocus"
+    },
+    {
+        "key": "shift+cmd+l",
+        "command": "-addCursorsAtSearchResults",
+        "when": "fileMatchOrMatchFocus && searchViewletVisible"
+    },
+]

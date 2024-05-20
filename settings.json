@@ -28,26 +28,18 @@
     "workbench.startupEditor": "none",
     "explorer.confirmDragAndDrop": false,
     "git.autorefresh": true,
-    "settingsSync.ignoredSettings": [
-        "update.mode",
-        "editor.fontSize",
-        "sqlfluff.executablePath",
-        "sqlfluff.env.customDotEnvFiles",
-        "sqlfluff.env.useDotEnvFile"
-    ],
     "jupyter.interactiveWindow.creationMode": "perFile",
     "notebook.confirmDeleteRunningCell": false,
     "notebook.lineNumbers": "on",
     "docsView.documentationView.updateMode": "sticky",
     "jupyter.askForKernelRestart": false,
-    "editor.minimap.enabled": false,
     "editor.unicodeHighlight.invisibleCharacters": false,
-    "editor.fontSize": 18,
+    "editor.fontSize": 15,
     "editor.accessibilitySupport": "off",
     "files.watcherExclude": {
         "**/***": true
     },
-    "terminal.integrated.fontSize": 17,
+    "terminal.integrated.fontSize": 12,
     "terminal.integrated.defaultProfile.linux": "zsh",
     // "terminal.integrated.shell.windows": "C:\\Users\\KL1406\\AppData\\Local\\Programs\\Git\\bin\\bash.exe",
     "terminal.integrated.profiles.windows": {
@@ -91,23 +83,23 @@
     ],
     "files.associations": {
         "*.sql": "sql",
-        "*.yml": "jinja-yaml"
+        "*.yml": "yaml"
     },
+    // "files.associations": {
+    //     "*.sql": "jinja-sql",
+    //     "*.yml": "jinja-yaml"
+    // },
     "[jinja-sql]": {
         "editor.defaultFormatter": "henriblancke.vscode-dbt-formatter"
     },
     "workbench.iconTheme": "vscode-icons",
-    "sqlfluff.executablePath": "",
     "redhat.telemetry.enabled": true,
-    "sqlfluff.env.useDotEnvFile": true,
-    "window.zoomLevel": 1,
     "dev.containers.defaultFeatures": {},
     "editor.smoothScrolling": true,
     "terminal.integrated.smoothScrolling": true,
     "workbench.list.smoothScrolling": true,
     "terminal.integrated.cursorStyle": "underline",
     "workbench.colorTheme": "Bluloco Dark",
-    "gitlens.graph.minimap.enabled": false,
     "git.fetchOnPull": true,
     "settingsSync.keybindingsPerPlatform": true,
     "editor.definitionLinkOpensInPeek": true,
@@ -136,15 +128,70 @@
         "*.xlsx": "cweijan.officeViewer",
         "*.csv": "default"
     },
-    "sqltools.useNodeRuntime": false,
+    "sqltools.useNodeRuntime": true,
     "mssql.enableQueryHistoryCapture": false,
-    "sqltools.connections": [],
+    "sqltools.connections": [
+        {
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 5432,
+            "driver": "PostgreSQL",
+            "name": "localhost",
+            "database": "postgres",
+            "username": "postgres",
+            "password": "5432"
+        },
+        {
+            "previewLimit": 50,
+            "driver": "SQLite",
+            "database": ":memory:",
+            "name": "local"
+        },
+        {
+            "previewLimit": 50,
+            "driver": "SQLite",
+            "name": "tmp",
+            "database": "/Users/luutuankiet/Downloads/ETL_WO_activity_base_export.csv"
+        }
+    ],
     "[sql]": {
-        "editor.defaultFormatter": "ms-mssql.mssql"
+        "editor.defaultFormatter": "henriblancke.vscode-dbt-formatter"
     },
     "poor-mans-t-sql-formatter-pg.std.breakJoinOnSections": true,
     "poor-mans-t-sql-formatter-pg.std.expandInLists": true,
-    "diffEditor.hideUnchangedRegions.enabled": true,
     "editor.renderLineHighlight": "all",
     "explorer.confirmDelete": false,
+    "flake8.args": [
+        "--max-line-length=120",
+        "--ignore=E402,E303,E702,F841,F401,E302,E305,E265,E231,E501,E225,W292,W293"
+    ],
+    "leetcode.workspaceFolder": "/Users/luutuankiet/.leetcode",
+    "leetcode.defaultLanguage": "python3",
+    "markdown.preview.fontSize": 15,
+    "leetcode.hint.commandShortcut": false,
+    "leetcode.hint.configWebviewMarkdown": false,
+    "editor.formatOnType": true,
+    "sqltools.highlightQuery": false,
+    "workbench.editorLargeFileConfirmation": 30,
+    "cody.autocomplete.enabled": true,
+    "debug.onTaskErrors": "debugAnyway",
+    "security.workspace.trust.untrustedFiles": "open",
+    "explorer.confirmPasteNative": false,
+    "sqltools.defaultOpenType": "csv",
+    "sqltools.defaultExportType": "csv",
+    "sqltools.disableNodeDetectNotifications": true,
+    "sqltools.disableReleaseNotifications": true,
+    "sqltools.tableTreeItemsExpanded": true,
+    "sqltools.csvExport.quoted": true,
+    "sqltools.csvExport.delimiter": "|",
+    "sqltools.results.reuseTabs": "connection",
+    "explorer.incrementalNaming": "disabled",
+    "cloudcode.project": "selfhost-422514",
+    "cloudcode.autoDependencies": "off",
+    "editor.minimap.enabled": false,
+    "window.zoomPerWindow": true,
+    "window.zoomLevel": -1,
+    "docker.containers.label": "ContainerName",
+    "docker.containers.sortBy": "CreatedTime",
+    
 }
