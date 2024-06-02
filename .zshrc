@@ -1,5 +1,3 @@
-
-
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
@@ -64,7 +62,6 @@ ZSH_THEME="robbyrussell"
 # see 'man strftime' for details.
 # HIST_STAMPS="mm/dd/yyyy"
 
-
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
 
@@ -73,7 +70,7 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-autosuggestions zsh-syntax-highlighting fast-syntax-highlighting zsh-autocomplete)
+plugins=(git zsh-autosuggestions)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -102,20 +99,72 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias ipaddress="curl ifconfig.me/ip"
-alias dev="~/utils/tmux_dev"
-alias detach="tmux detach"
-alias {hdi,h}="python -m howdoi $* -c -n 3"
-alias adb='~/utils/platform-tools/adb'
+alias h="history"
+alias t="/Users/luutuankiet/config-backups/ticktask_new $*"
+# Dependencies: fzf, awk, bat, tr
 
-# adding path - syntax : export PATH=$PATH:/path/to/folder1:/path/to/folder2:/path/to/folder3
-export PATH=$PATH:/home/kiet/.local/bin:/home/kiet/x-tools/arm-kindlepw2-linux-gnueabi/bin:
+fman() {
+    	man -k . |
+		fzf --exact -q "$1" --prompt='man> '  --preview $'echo {} |
+		tr -d \'()\' |
+		awk \'{printf "%s ", $2} {print $1}\' |
+		xargs -r man |
+		col -bx |
+		bat -l man -p --color always'|
+		tr -d '()' | awk '{printf "%s ", $2} {print $1}' |
+		xargs -r man
+}
+# Get the colors in the opened man page itself
+export MANPAGER="sh -c 'col -bx | bat -l man -p --paging always'"
 
-#
+
+# sets 
+unset MANPAGER
+
+# for leetcode
+alias leetcode="docker run --rm -e POSTGRES_PASSWORD=5432 -p 5432:5432 -d postgres"
+
+# Created by `pipx` on 2024-04-10 07:09:14
+export PATH="$PATH:/Users/luutuankiet/.local/bin"
+alias snowsql=/Applications/SnowSQL.app/Contents/MacOS/snowsql
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/luutuankiet/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/luutuankiet/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/luutuankiet/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/luutuankiet/google-cloud-sdk/completion.zsh.inc'; fi
 
 
-alias transfer_files="cp -P 15108 tmp luutuankiet@192.168.1.14:~"# a small script to send temp text file from mint to mac
-alias off="xset dpms force off"
-alias p="scrcpy"
-alias innovm="ssh -i ~/.ssh/InnoVM1_key.pem VMAdmin@40.90.168.49"
-alias rm=trash
+function remote() {
+    local user=${1:-ken}
+    local host=${2:-dell}
+    local dir=${3:-dev}
+
+    local remote_uri="vscode-remote://ssh-remote+${user}@${host}/home/${user}/${dir}"
+
+    eval "code --folder-uri \"${remote_uri}\""
+		echo "remote to \"${remote_uri}\"..."
+}
+
+
+
+function cleanup_docker {
+  # Prune Docker system
+  sudo docker system prune -a -f || echo "Failed to prune Docker system"
+
+  # Remove exited containers
+  containers=$(sudo docker ps -a -q -f status=exited)
+  if [ -n "$containers" ]; then
+    sudo docker rm -v $containers || echo "Failed to remove exited containers"
+  else
+    echo "No exited containers to remove"
+  fi
+
+  # Remove dangling images
+  images=$(sudo docker images -f "dangling=true" -q)
+  if [ -n "$images" ]; then
+    sudo docker rmi -f $images || echo "Failed to remove dangling images"
+  else
+    echo "No dangling images to remove"
+  fi
+}
