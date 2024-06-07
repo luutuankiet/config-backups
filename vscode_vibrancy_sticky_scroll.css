@@ -1,0 +1,5 @@
+.monaco-editor .sticky-widget {
+	backdrop-filter: blur(8px);
+}
+
+/* https://github.com/illixion/vscode-vibrancy-continued/issues/14#issuecomment-1287922103 */
